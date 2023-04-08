@@ -1,4 +1,4 @@
-resource "jenkins_folder" "infra" {
+resource "jenkins_folder" "folders" {
   name = "infrastructure"
 }
 
