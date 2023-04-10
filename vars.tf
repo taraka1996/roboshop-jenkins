@@ -4,13 +4,13 @@ variable "folders" {
 
 variable "jobs" {
   default = [
-    { name = "roboshop", folder = "Infra", repo_url = "https://github.com/sriharitirumala/roboshop-infra" },
-    { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/sriharitirumala/frontend" },
-    { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/sriharitirumala/cart" },
-    { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/sriharitirumala/catalogue" },
-    { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/sriharitirumala/user" },
-    { name = "shipping", folder = "CI-pipeline", repo_url = "https://github.com/sriharitirumala/shipping" },
-    { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/sriharitirumala/payment" },
+    { name = "roboshop", folder = "Infra", repo_url = "https://github.com/taraka1996/roboshop-infra" },
+    { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/frontend" },
+    { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/cart" },
+    { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/catalogue" },
+    { name = "user", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/user" },
+    { name = "shipping", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/shipping" },
+    { name = "payment", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/payment" },
     
   ]
 }    
