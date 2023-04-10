@@ -4,7 +4,6 @@ variable "folders" {
 
 variable "jobs" {
   default = [
-    { name = "roboshop", folder = "Infra", repo_url = "https://github.com/taraka1996/roboshop-infra" },
-    
+    { name = "roboshop", folder = "Infra", repo_url = "https://github.com/sriharitirumala/roboshop-infra" }
   ]
-}   
+}
