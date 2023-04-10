@@ -1,12 +1,12 @@
 resource "jenkins_folder" "folders" {
-  name =  "infrastructure"
+  name =  "infra"
 }
 
 resource "jenkins_job" "job" {
-  name     = example
-  folder   = jenkins_folders.folder.id
+  name     = "roboshop"
+  folder   = jenkins_folder.folder.id
   template = templatefile("${path.module}/sb-job.xml", {
-    description = "An example job" 
+    description = "" 
   })
 }  
 
