@@ -1,17 +1,13 @@
 resource "jenkins_folder" "folders" {
-  count = length(var.folders)
-  name =  element(var.folders, count.index )
+  name =  "infrastructure"
 }
 
 resource "jenkins_job" "job" {
-  count    = length(var.jobs)
-  name     = lookup(element(var.jobs, count.index), "name", null)
-  folder   = "/job/${lookup(element(var.jobs, count.index), "folder", null)}"
+  name     = example
+  folder   = jenkins_folders.folder.id
   template = templatefile("${path.module}/sb-job.xml", {
-    repo_url = lookup(element(var.jobs, count.index), "repo_url", null)
+    description = "An example job" 
   })
+}  
 
-  lifecycle {
-    ignore_changes = [ template ]
-  }
-}
+  
