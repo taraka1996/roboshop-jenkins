@@ -14,12 +14,4 @@ resource "jenkins_job" "job" {
     repo_url = lookup(element(var.jobs, count.index), "repo_url", null)
   })
 
-  lifecycle {
-    ignore_changes = local.ignore_changes
- }
-
-}
-
-locals {
-  ignore_changes = []
-}
+} 
