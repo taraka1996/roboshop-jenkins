@@ -14,6 +14,24 @@ resource "jenkins_job" "job" {
     repo_url = lookup(element(var.jobs, count.index), "repo_url", null)
   })
 
-} 
 
-  
+
+lifecycle {
+  ignroe_changes = [template]
+      
+ }
+
+}
+
+data "aws_instance" "jenkins" {
+  id = "i-094cb43f580e5bedd"
+}
+
+
+resource "aws_route53_record" "jenkins" {
+  zone_id = "Z09657943T1DXGIZMZ588"
+  name    = "jenkins.tarak.cloud"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.jenkins.public_ip]
+}
