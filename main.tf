@@ -24,7 +24,7 @@ lifecycle {
 }
 
 data "aws_instance" "jenkins" {
-  id = "i-094cb43f580e5bedd"
+  instance_id = "i-094cb43f580e5bedd"
 }
 
 resource "aws_route53_record" "jenkins" {
