@@ -23,11 +23,8 @@ lifecycle {
 
 }
 
-data "aws_instances" "jenkins" {
-  filter {
-    name   = "instance-id"
-    values = ["i-094cb43f580e5bedd"]
-  }
+data "aws_instance" "jenkins" {
+  id = "i-094cb43f580e5bedd"
 }
 
 resource "aws_route53_record" "jenkins" {
@@ -35,5 +32,5 @@ resource "aws_route53_record" "jenkins" {
   name    = "jenkins.devopsb71services.site"
   type    = "A"
   ttl     = 30
-  records = [data.aws_instances.jenkins.instances[0].public_ip]
+  records = [data.aws_instance.jenkins.public_ip]
 }
