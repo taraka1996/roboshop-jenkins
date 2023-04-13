@@ -29,7 +29,7 @@ data "aws_instance" "jenkins" {
 
 resource "aws_route53_record" "jenkins" {
   zone_id = "Z09657943T1DXGIZMZ588"
-  name    = "jenkins.devopsb71services.site"
+  name    = "jenkins.tarak.cloud"
   type    = "A"
   ttl     = 30
   records = [data.aws_instance.jenkins.public_ip]
