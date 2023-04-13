@@ -17,20 +17,20 @@ resource "jenkins_job" "job" {
 
 
 lifecycle {
-  ignore_changes = [template]
+  ignroe_changes = [template]
       
  }
 
 }
 
-resource "aws_instance" "jenkins" {
+data "aws_instance" "jenkins" {
   id = "i-094cb43f580e5bedd"
 }
 
-resource "aws_instance" "jenkins" {
-  ami           = "ami-0c94855ba95c71c99"
-  instance_type = "t2.micro"
-  key_name      = "my-key"
-  vpc_security_group_ids = [aws_security_group.jenkins.id]
-  subnet_id     = aws_subnet.jenkins.id
+resource "aws_route53_record" "jenkins" {
+  zone_id = "Z09657943T1DXGIZMZ588"
+  name    = "jenkins.devopsb71services.site"
+  type    = "A"
+  ttl     = 30
+  records = [data.aws_instance.jenkins.public_ip]
 }
