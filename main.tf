@@ -15,7 +15,7 @@ resource "jenkins_job" "job" {
     name = lookup(element(var.jobs, count.index), "name", null)
   })
 
-
+}
 
 data "aws_instance" "jenkins" {
   instance_id = "i-094cb43f580e5bedd"
