@@ -40,9 +40,11 @@
             <submoduleCfg class="empty-list"/>
             <extensions/>
         </scm>
-        <scriptPath>${filename}</scriptPath>
+        <scriptPath>Jenkinsfile</scriptPath>
         <lightweight>true</lightweight>
     </definition>
     <triggers/>
     <disabled>false</disabled>
 </flow-definition>
+
+
