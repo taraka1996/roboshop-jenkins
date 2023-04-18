@@ -31,7 +31,7 @@
           <apiUri>https://api.github.com</apiUri>
           <credentialsId>GitHub</credentialsId>
           <repoOwner>taraka1996</repoOwner>
-          <repository>${cart}</repository>
+          <repository>${name}</repository>
           <repositoryUrl>${repo_url}</repositoryUrl>
           <traits>
             <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
