@@ -16,7 +16,7 @@ resource "jenkins_job" "s-job" {
   })
 
 }
-resource "jenkins_job" "m-job" {
+resource "jenkins_job" "m-jobs" {
   depends_on = [jenkins_folder.folders]
   
   count    = length(var.m-jobs)
