@@ -15,6 +15,10 @@ resource "jenkins_job" "s-job" {
     name = lookup(element(var.s-jobs, count.index), "name", null)
   })
 
+    lifecycle {
+      ignore_changes = [template]
+    }
+
 }
 resource "jenkins_job" "m-jobs" {
   depends_on = [jenkins_folder.folders]
@@ -27,6 +31,11 @@ resource "jenkins_job" "m-jobs" {
     repo_url = lookup(element(var.m-jobs, count.index), "repo_url", null)
     name = lookup(element(var.m-jobs, count.index), "name", null)
   })
+
+  lifecycle {
+      ignore_changes = [template]
+    }
+    
 }
 
 data "aws_instance" "jenkins" {
