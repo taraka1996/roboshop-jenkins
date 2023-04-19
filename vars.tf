@@ -4,7 +4,6 @@ variable "folders" {
 
 variable "m-jobs" {
   default = [
-    { name = "roboshop", folder = "Infra", repo_url = "https://github.com/taraka1996/roboshop-infra" },
     { name = "frontend", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/frontend" },
     { name = "cart", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/cart" },
     { name = "catalogue", folder = "CI-pipeline", repo_url = "https://github.com/taraka1996/catalogue" },
